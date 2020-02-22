@@ -7,15 +7,12 @@ public class Snake : MonoBehaviour{
 
     public GameObject Head;
     public GameObject Parent;
-    public float f_RotateTime = 1.0f;
-
+    public float f_RotateTime;
 
     bool bool_IsRotate = false;
     Vector3 v3_RotateDirection;
 
-    // Start is called before the first frame update
     void Start(){
-
         InvokeRepeating("GO",1.0f,1.0f);
         bool_IsRotate = false;
         v3_RotateDirection = new Vector3(0.0f,0.0f,0.0f);
@@ -24,9 +21,7 @@ public class Snake : MonoBehaviour{
     
     IEnumerator StartCubeRoation(Vector3 v){
         bool_IsRotate = true;
-        //print("Start Rotation");
         yield return CubeRotation(v);
-        //print("Done Rotation");
         bool_IsRotate = false;
     }
 
@@ -35,11 +30,16 @@ public class Snake : MonoBehaviour{
         yield return t.WaitForCompletion();
     }
 
-
+    public void Rotate(Vector3 v){
+        if(!bool_IsRotate){
+            v3_RotateDirection = v;
+            StartCoroutine("StartCubeRoation" , v3_RotateDirection);
+        }
+    }
 
     void Update(){
         v3_RotateDirection.Set(0.0f,0.0f,0.0f);
-        //Tween mytween = Parent.transform.DORotate(new Vector3(90.0f,0.0f,0.0f), f_RotateTime,RotateMode.LocalAxisAdd);
+        
         if(!bool_IsRotate){
 
             if(Input.GetKeyDown(KeyCode.W)){

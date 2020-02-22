@@ -70,6 +70,7 @@
      <Compile Include="Assets\DOTween Examples\Paths.cs" />
      <Compile Include="Assets\DOTween Examples\Sequences.cs" />
      <Compile Include="Assets\DOTween Examples\UGUI.cs" />
+     <Compile Include="Assets\Scripts\InputControl_CubeRotation.cs" />
      <Compile Include="Assets\Scripts\Snake.cs" />
      <None Include="Assets\Demigiant\DOTween\readme.txt" />
  <Reference Include="Unity.TextMeshPro.Editor">
