@@ -30,7 +30,23 @@ public class Snake : MonoBehaviour{
         yield return t.WaitForCompletion();
     }
 
-    public void Rotate(Vector3 v){
+    public void Rotate(string str_Direction){
+        Vector3 v = new Vector3(0.0f,0.0f,0.0f);
+
+        if(str_Direction == "up"){
+            v.Set(0.0f,0.0f,90.0f);
+        }else if(str_Direction == "down"){
+            v.Set(0.0f,0.0f,-90.0f);
+        }else if(str_Direction == "right"){
+            v.Set(0.0f,-90.0f,0.0f);
+        }else if(str_Direction == "left"){
+            v.Set(0.0f,90.0f,0.0f);
+        }else if(str_Direction == "clockwise"){
+            v.Set(90.0f,0.0f,0.0f);
+        }else if(str_Direction == "counterClockwise"){
+            v.Set(-90.0f,0.0f,0.0f);
+        }
+
         if(!bool_IsRotate){
             v3_RotateDirection = v;
             StartCoroutine("StartCubeRoation" , v3_RotateDirection);
@@ -43,10 +59,10 @@ public class Snake : MonoBehaviour{
         if(!bool_IsRotate){
 
             if(Input.GetKeyDown(KeyCode.W)){
-                v3_RotateDirection.x = -90.0f;
+                v3_RotateDirection.z = 90.0f;
                 StartCoroutine("StartCubeRoation" , v3_RotateDirection);
             }else if(Input.GetKeyDown(KeyCode.S)){
-                v3_RotateDirection.x = 90.0f;
+                v3_RotateDirection.z = -90.0f;
                 StartCoroutine("StartCubeRoation" , v3_RotateDirection);
             }else if(Input.GetKeyDown(KeyCode.D)){
                 v3_RotateDirection.y = -90.0f;
@@ -55,10 +71,10 @@ public class Snake : MonoBehaviour{
                 v3_RotateDirection.y = 90.0f;
                 StartCoroutine("StartCubeRoation" , v3_RotateDirection);
             }else if(Input.GetKeyDown(KeyCode.E)){    
-                v3_RotateDirection.z = 90.0f;
+                v3_RotateDirection.x = 90.0f;
                 StartCoroutine("StartCubeRoation" , v3_RotateDirection);
             }else if(Input.GetKeyDown(KeyCode.Q)){
-                v3_RotateDirection.z = -90.0f;
+                v3_RotateDirection.x = -90.0f;
                 StartCoroutine("StartCubeRoation" , v3_RotateDirection); 
             }
 
@@ -69,7 +85,9 @@ public class Snake : MonoBehaviour{
     }
 
     public void GO(){
-
-        Head = Instantiate(Head,new Vector3(Head.transform.position.x,Head.transform.position.y+1,Head.transform.position.z),Quaternion.identity,Parent.transform);
+        if(!bool_IsRotate){
+            Head = Instantiate(Head,new Vector3(Head.transform.position.x,Head.transform.position.y+1,Head.transform.position.z),Quaternion.identity,Parent.transform);
+        }
+        
     }
 }
