@@ -20,14 +20,27 @@ public class sc_CubeRotation : MonoBehaviour{
 
     
     IEnumerator StartCubeRoation(Vector3 v){
+        
         bool_IsRotate = true;
         yield return CubeRotation(v);
-        //Debug.Log(this.gameObject.transform.rotation.eulerAngles);
         bool_IsRotate = false;
+        //Vector3 vcube = this.gameObject.transform.eulerAngles;
+        //vcube.x = Mathf.Floor(vcube.x);
+        //vcube.y = Mathf.Floor(vcube.y);
+        //vcube.z = Mathf.Floor(vcube.z);
+
+        //this.gameObject.transform.eulerAngles.x = Mathf.Floor(this.gameObject.transform.eulerAngles.x);
+        //this.gameObject.transform.eulerAngles.y = Mathf.Floor(this.gameObject.transform.eulerAngles.y);
+        //this.gameObject.transform.eulerAngles.z = Mathf.Floor(this.gameObject.transform.eulerAngles.z);
+
+        //this.gameObject.transform.eulerAngles = vcube;
+
     }
 
     IEnumerator CubeRotation(Vector3 v){
-        Tween t = this.gameObject.transform.DORotate(new Vector3(v.x,v.y,v.z), f_RotateTime,RotateMode.WorldAxisAdd).SetEase(Ease.OutExpo); 
+        Tween t = this.gameObject.transform.DOLocalRotate(new Vector3(v.x,v.y,v.z), f_RotateTime,RotateMode.WorldAxisAdd).SetEase(Ease.OutExpo);
+        //this.gameObject.transform.Rotate(new Vector3(v.x,v.y,v.z),Space.Self);
+        //yield return new WaitForSeconds(0.5f);
         yield return t.WaitForCompletion();
     }
 
@@ -58,7 +71,7 @@ public class sc_CubeRotation : MonoBehaviour{
         v3_RotateDirection.Set(0.0f,0.0f,0.0f);
         
         if(!bool_IsRotate){
-
+            Debug.Log(this.gameObject.transform.localEulerAngles.ToString("F8"));
             if(Input.GetKeyDown(KeyCode.W)){
                 v3_RotateDirection.z = 90.0f;
                 StartCoroutine("StartCubeRoation" , v3_RotateDirection);

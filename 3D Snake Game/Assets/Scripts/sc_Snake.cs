@@ -31,16 +31,16 @@ public class sc_Snake : MonoBehaviour
             if(finish_turn){
                 Instantiate(SnakeBodyPart,new Vector3(SnakeHead.transform.position.x,SnakeHead.transform.position.y,SnakeHead.transform.position.z),Quaternion.identity,Cube.transform);
                 firstPos = SnakeHead.transform.position;
+                finish_turn = false;
             }
             SnakeHead.transform.position += SnakeSpeed*Vector3.up;
-            
+            //Debug.Log(SnakeHead.transform.position);
             if(Vector3.Distance(SnakeHead.transform.position,firstPos)>=SnakeLength-0.01){
                 Instantiate(SnakeBodyPart,new Vector3(SnakeHead.transform.position.x,SnakeHead.transform.position.y,SnakeHead.transform.position.z),Quaternion.identity,Cube.transform);
                 firstPos = SnakeHead.transform.position;
             } 
         }else{
             finish_turn = true;
-            //firstPos = SnakeHead.transform.position;
         }
     }
 

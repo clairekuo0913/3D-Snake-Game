@@ -528,10 +528,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 956545231}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bb7e5331e4be4bb4aaf1cfa3b75b48d, type: 3}
+  m_Script: {fileID: 11500000, guid: 98ec8ff2b12004c1c8c19e80b71da518, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cube: {fileID: 0}
+  Cube: {fileID: 956545231}
   f_RotateTime: 0.8
   bool_IsRotate: 0
 --- !u!1 &1496583636
@@ -1003,7 +1003,7 @@ PrefabInstance:
     - target: {fileID: 5452020326806943328, guid: 41552cf42056040b9a455f3c42401da7,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5452020326806943328, guid: 41552cf42056040b9a455f3c42401da7,
         type: 3}
@@ -1024,6 +1024,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Snake
+      objectReference: {fileID: 0}
+    - target: {fileID: 5452020326806943333, guid: 41552cf42056040b9a455f3c42401da7,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41552cf42056040b9a455f3c42401da7, type: 3}
@@ -1077,7 +1082,7 @@ PrefabInstance:
     - target: {fileID: 4911384252016855289, guid: 6531ab67994a14352bcde186b1ac72fc,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4911384252016855289, guid: 6531ab67994a14352bcde186b1ac72fc,
         type: 3}
