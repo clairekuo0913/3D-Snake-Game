@@ -172,7 +172,6 @@ public class sc_InputControl_CubeRotation : MonoBehaviour
                 }
             }
         }
-
     }
 
     // Start is called before the first frame update
@@ -195,8 +194,6 @@ public class sc_InputControl_CubeRotation : MonoBehaviour
     // Update is called once per frame
     void Update(){
         
-        
-     
     }
 
     
