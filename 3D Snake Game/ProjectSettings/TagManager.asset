@@ -7,6 +7,7 @@ TagManager:
   - Cube
   - Snake
   - SnakeBodyPart
+  - EndPoint
   layers:
   - Default
   - TransparentFX
