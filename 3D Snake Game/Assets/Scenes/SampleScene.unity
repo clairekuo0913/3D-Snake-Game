@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -275,7 +275,7 @@ GameObject:
   - component: {fileID: 758254952}
   m_Layer: 0
   m_Name: Input Controller
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -383,9 +383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98ec8ff2b12004c1c8c19e80b71da518, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cube: {fileID: 947805131}
   f_RotateTime: 0.8
-  bool_IsRotate: 0
 --- !u!65 &947805134
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -459,7 +457,7 @@ GameObject:
   - component: {fileID: 956545236}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Cube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -549,9 +547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98ec8ff2b12004c1c8c19e80b71da518, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cube: {fileID: 956545231}
   f_RotateTime: 0.8
-  bool_IsRotate: 0
 --- !u!1 &1341845492
 GameObject:
   m_ObjectHideFlags: 0
@@ -598,9 +594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98ec8ff2b12004c1c8c19e80b71da518, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cube: {fileID: 1341845492}
   f_RotateTime: 0.8
-  bool_IsRotate: 0
 --- !u!65 &1341845495
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -738,9 +732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98ec8ff2b12004c1c8c19e80b71da518, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cube: {fileID: 1859533522}
   f_RotateTime: 0.8
-  bool_IsRotate: 0
 --- !u!65 &1859533525
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -815,7 +807,7 @@ GameObject:
   - component: {fileID: 2073170255}
   m_Layer: 0
   m_Name: Snake
-  m_TagString: Untagged
+  m_TagString: Snake
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -999,8 +991,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2420be4148fa406399e54564e6706d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NumOfBodyParts: 1
-  SnakeSpeed: 0.1
-  SnakeHead: {fileID: 2073170249}
-  SnakeBodyPart: {fileID: 4549538244087577895, guid: 6531ab67994a14352bcde186b1ac72fc,
+  f_NumOfBodyParts: 5
+  f_SnakeSpeed: 0.1
+  gmobj_SnakeBodyPart: {fileID: 4549538244087577895, guid: 6531ab67994a14352bcde186b1ac72fc,
     type: 3}
