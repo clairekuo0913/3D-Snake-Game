@@ -28,7 +28,7 @@ public class sc_InputControl_CubeRotation : MonoBehaviour
         RaycastHit hit = new RaycastHit();
         Ray ray = Camera.main.ScreenPointToRay(first_press_pos);
 
-        //if hit on Cube, then detect surface and swipe direction
+        //if hit Cube, then detect surface and swipe direction
         if(Physics.Raycast(ray, out hit)){
             
             BoxCollider CubeSurface = hit.collider.gameObject.GetComponentInChildren<BoxCollider>();
@@ -107,15 +107,18 @@ public class sc_InputControl_CubeRotation : MonoBehaviour
         //raycast for the first press
         Touch touch = Input.GetTouch(0);
         if(touch.phase == TouchPhase.Began){
-            first_press_pos = new Vector2(Input.mousePosition.x,Input.mousePosition.y);
+            first_press_pos = new Vector2(touch.position.x,touch.position.y);
         }
         RaycastHit hit = new RaycastHit();
         Ray ray = Camera.main.ScreenPointToRay(first_press_pos);
 
+        // if hitting Cube, detect surface and swipe direction
         if(Physics.Raycast(ray, out hit)){
             
             BoxCollider CubeSurface = hit.collider.gameObject.GetComponentInChildren<BoxCollider>();
             Vector2 dv,dh;
+
+
             if(touch.deltaPosition.magnitude > 10.0f){
                 if(CubeSurface.gameObject.name == "pos_x"){
                     dv = Vector2.Dot(touch.deltaPosition,scrn_yAxis.normalized) * scrn_yAxis.normalized;
