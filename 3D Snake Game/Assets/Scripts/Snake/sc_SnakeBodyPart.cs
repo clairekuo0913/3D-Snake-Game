@@ -1,6 +1,6 @@
 ﻿/*--------------------------------------*/
-/* Purpose：判斷是否撞到自己
-/*
+/* Purpose
+/* 1. 判斷是否撞到自己
 /*
 /*--------------------------------------*/
 
@@ -14,6 +14,7 @@ public class sc_SnakeBodyPart : MonoBehaviour
     
 	GameObject gmobj_SnakeHead;
     GameObject gmobj_Cube;
+    
     bool IsTouchingBody(){
         Vector3[] v3_snakeHeadPos = new Vector3[5];
         for(int i=0;i<5;i++){
@@ -41,9 +42,7 @@ public class sc_SnakeBodyPart : MonoBehaviour
             }
 
         }
-        return false;
-        
-        
+        return false;   
     }
 
     // Start is called before the first frame update
@@ -56,12 +55,15 @@ public class sc_SnakeBodyPart : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // 碰到自己的時候死掉！
         if(!gmobj_Cube.GetComponent<sc_CubeRotation>().IsRotating()){
             if(IsTouchingBody()){
                 Debug.Log("You touch yourself hahahaha");
                 SceneManager.LoadScene(0);
             }
         }
+
+
         
     }
 }

@@ -9,7 +9,9 @@ public class sc_Snake : MonoBehaviour
     public float f_SnakeSpeed;
     public GameObject gmobj_SnakeBodyPart;
     GameObject gmobj_SnakeHead;
+    GameObject gmobj_SnakeBodyParts;
     GameObject gmobj_Cube;
+
 
     GameObject[] gmobjarr_Snakes = new GameObject[10000];
     
@@ -25,7 +27,7 @@ public class sc_Snake : MonoBehaviour
         // Snake's Growth
         for(int i=1;i<=i_maxOfInstant;i++){
             if(!gmobj_Cube.GetComponent<sc_CubeRotation>().IsRotating()){
-                gmobjarr_Snakes[i] = Instantiate(gmobj_SnakeBodyPart, new Vector3(gmobj_SnakeHead.transform.position.x, gmobj_SnakeHead.transform.position.y, gmobj_SnakeHead.transform.position.z) ,Quaternion.identity,gmobj_Cube.transform);
+                gmobjarr_Snakes[i] = Instantiate(gmobj_SnakeBodyPart, new Vector3(gmobj_SnakeHead.transform.position.x, gmobj_SnakeHead.transform.position.y, gmobj_SnakeHead.transform.position.z) ,Quaternion.identity,gmobj_SnakeBodyParts.transform);
                 gmobj_SnakeHead.transform.position += f_SnakeSpeed * Vector3.up;
             }else{
                 i--;    // do nothing while cube is rotating
@@ -38,7 +40,7 @@ public class sc_Snake : MonoBehaviour
         while(true){
             for(int i=1;i<=i_maxOfInstant;i++){
                 if(!gmobj_Cube.GetComponent<sc_CubeRotation>().IsRotating()){
-                    gmobjarr_Snakes[i] = Instantiate(gmobj_SnakeBodyPart, new Vector3(gmobj_SnakeHead.transform.position.x, gmobj_SnakeHead.transform.position.y, gmobj_SnakeHead.transform.position.z) ,Quaternion.identity,gmobj_Cube.transform);
+                    gmobjarr_Snakes[i] = Instantiate(gmobj_SnakeBodyPart, new Vector3(gmobj_SnakeHead.transform.position.x, gmobj_SnakeHead.transform.position.y, gmobj_SnakeHead.transform.position.z) ,Quaternion.identity,gmobj_SnakeBodyParts.transform);
                     gmobj_SnakeHead.transform.position += f_SnakeSpeed * Vector3.up;
                     if(i == i_maxOfInstant){Destroy(gmobjarr_Snakes[1]);}
                     else{Destroy(gmobjarr_Snakes[i+1]);}
@@ -69,6 +71,7 @@ public class sc_Snake : MonoBehaviour
     {
         gmobj_Cube =  GameObject.FindWithTag("Cube"); 
         gmobj_SnakeHead = GameObject.FindWithTag("Snake");
+        gmobj_SnakeBodyParts = GameObject.Find("SnakeBodyParts"); 
         StartCoroutine("SnakeMovement");
 
     }
@@ -76,7 +79,7 @@ public class sc_Snake : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+         
     }
 
     

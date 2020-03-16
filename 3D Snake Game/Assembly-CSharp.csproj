@@ -60,22 +60,13 @@
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
-     <Compile Include="Assets\DOTween Examples\Basics.cs" />
-     <Compile Include="Assets\DOTween Examples\CustomPlugin Example\CustomPluginExampleBrain.cs" />
-     <Compile Include="Assets\DOTween Examples\CustomPlugin Example\CustomRange.cs" />
-     <Compile Include="Assets\DOTween Examples\CustomPlugin Example\CustomRangePlugin.cs" />
-     <Compile Include="Assets\DOTween Examples\Example Assets\DragTarget.cs" />
-     <Compile Include="Assets\DOTween Examples\Follow.cs" />
-     <Compile Include="Assets\DOTween Examples\Materials.cs" />
-     <Compile Include="Assets\DOTween Examples\Paths.cs" />
-     <Compile Include="Assets\DOTween Examples\Sequences.cs" />
-     <Compile Include="Assets\DOTween Examples\UGUI.cs" />
      <Compile Include="Assets\Scripts\Controller\sc_InputControl_CubeRotation.cs" />
      <Compile Include="Assets\Scripts\Cube\sc_CubeRotation.cs" />
+     <Compile Include="Assets\Scripts\Cube\sc_CubeScaling.cs" />
+     <Compile Include="Assets\Scripts\Obstacle\sc_Obstacle.cs" />
      <Compile Include="Assets\Scripts\Snake\sc_Snake.cs" />
      <Compile Include="Assets\Scripts\Snake\sc_SnakeBodyPart.cs" />
      <None Include="Assets\Demigiant\DOTween\readme.txt" />
-     <None Include="Assets\Editor Default Resources\Code Editor\OFL.txt" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>/Users/pot/Documents/_Pot_/MyGit/3D-Snake-Game/3D Snake Game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>

@@ -8,6 +8,8 @@ TagManager:
   - Snake
   - SnakeBodyPart
   - EndPoint
+  - SnakeBodyParts
+  - Obstacle
   layers:
   - Default
   - TransparentFX

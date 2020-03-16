@@ -7,17 +7,28 @@ public class sc_CubeRotation : MonoBehaviour{
 
 
     public float f_RotateTime;
-
+    GameObject gmobj_Snake;
+    GameObject gmobj_SnakeBodyParts;
+    GameObject gmobj_EndPoint;
     bool bool_IsRotate;
 
     void Start(){
         bool_IsRotate = false;
+        gmobj_Snake =  GameObject.FindWithTag("Snake"); 
+        gmobj_SnakeBodyParts = GameObject.FindWithTag("SnakeBodyParts");
+        gmobj_EndPoint = GameObject.FindWithTag("EndPoint");
     }
 
     IEnumerator StartCubeRoation(Vector3 v3_rotateDirection){
         
         bool_IsRotate = true;
+        gmobj_Snake.transform.parent = this.gameObject.transform;
+        gmobj_SnakeBodyParts.transform.parent = this.gameObject.transform;
+        gmobj_EndPoint.transform.parent = this.gameObject.transform;
         yield return CubeRotation(v3_rotateDirection);
+        gmobj_Snake.transform.parent = null;
+        gmobj_SnakeBodyParts.transform.parent=null;
+        gmobj_EndPoint.transform.parent = null;
         bool_IsRotate = false;
     }
 
@@ -56,7 +67,7 @@ public class sc_CubeRotation : MonoBehaviour{
    
 
     void Update(){
-
+        
     }
 
 
