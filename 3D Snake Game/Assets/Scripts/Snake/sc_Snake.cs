@@ -34,6 +34,7 @@ public class sc_Snake : MonoBehaviour
             }
             yield return null;
         }
+        
         Destroy(gmobjarr_Snakes[1]);
 
         // Snake's Movement
