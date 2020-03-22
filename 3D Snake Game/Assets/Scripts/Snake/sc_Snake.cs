@@ -58,11 +58,21 @@ public class sc_Snake : MonoBehaviour
     private void OnTriggerEnter(Collider cldr_other){
         if(cldr_other.tag == "Cube"){
             Debug.Log("You are DEAD.");
-            SceneManager.LoadScene(0);
+            Scene currScene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(currScene.buildIndex);
         }
         if(cldr_other.tag == "EndPoint"){
             Debug.Log("You WIN!");
-            SceneManager.LoadScene(0);
+            Scene currScene = SceneManager.GetActiveScene();
+            if(currScene.buildIndex == 0){
+                SceneManager.LoadScene(1);
+            }else if(currScene.buildIndex == 1){
+                SceneManager.LoadScene(2);
+            }else{
+                SceneManager.LoadScene(0);
+            }
+
+            
         }
     }
 

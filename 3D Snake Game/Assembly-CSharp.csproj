@@ -61,11 +61,14 @@
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
      <Compile Include="Assets\Scripts\Controller\sc_InputControl_CubeRotation.cs" />
+     <Compile Include="Assets\Scripts\Controller\sc_SceneController.cs" />
      <Compile Include="Assets\Scripts\Cube\sc_CubeRotation.cs" />
      <Compile Include="Assets\Scripts\Cube\sc_CubeScaling.cs" />
+     <Compile Include="Assets\Scripts\Endpoint\sc_EndPoint.cs" />
      <Compile Include="Assets\Scripts\Obstacle\sc_Obstacle.cs" />
      <Compile Include="Assets\Scripts\Snake\sc_Snake.cs" />
      <Compile Include="Assets\Scripts\Snake\sc_SnakeBodyPart.cs" />
+     <Compile Include="Assets\Scripts\Text\sc_FadeTextUp1.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />

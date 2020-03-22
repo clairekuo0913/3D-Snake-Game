@@ -59,7 +59,8 @@ public class sc_SnakeBodyPart : MonoBehaviour
         if(!gmobj_Cube.GetComponent<sc_CubeRotation>().IsRotating()){
             if(IsTouchingBody()){
                 Debug.Log("You touch yourself hahahaha");
-                SceneManager.LoadScene(0);
+                Scene currScene = SceneManager.GetActiveScene();
+                SceneManager.LoadScene(currScene.buildIndex);
             }
         }
 
