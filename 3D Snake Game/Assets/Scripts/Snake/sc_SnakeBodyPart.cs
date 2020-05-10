@@ -1,6 +1,6 @@
 ﻿/*--------------------------------------*/
 /* Purpose
-/* 1. 判斷是否撞到自己
+/* 判斷是否撞到自己
 /*
 /*--------------------------------------*/
 
@@ -21,6 +21,7 @@ public class sc_SnakeBodyPart : MonoBehaviour
             v3_snakeHeadPos[i] = gmobj_SnakeHead.transform.position;
             v3_snakeHeadPos[i].y += gmobj_SnakeHead.transform.lossyScale.y/2;
         }
+        
         v3_snakeHeadPos[1].x += gmobj_SnakeHead.transform.lossyScale.x/2;
         v3_snakeHeadPos[1].z += gmobj_SnakeHead.transform.lossyScale.z/2;
         
@@ -36,7 +37,7 @@ public class sc_SnakeBodyPart : MonoBehaviour
 
         Bounds bnd_snakeHeadBounds = gmobj_SnakeHead.GetComponent<Collider>().bounds;
         for(int i=0;i<5;i++){
-            //Debug.DrawLine(v3_snakeHeadPos[i],Vector3.zero);
+            Debug.DrawLine(v3_snakeHeadPos[i],Vector3.zero);
             if(this.GetComponent<Collider>().bounds.Contains(v3_snakeHeadPos[i])){
                 return true;
             }

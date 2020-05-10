@@ -11,7 +11,7 @@ public class sc_EndPoint : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         this.transform.Rotate(new Vector3(0,3,0));
     }
