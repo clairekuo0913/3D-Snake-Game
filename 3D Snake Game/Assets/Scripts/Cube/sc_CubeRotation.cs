@@ -13,6 +13,8 @@ public class sc_CubeRotation : MonoBehaviour{
     bool bool_IsRotate;
     public bool bool_DontRotate;
     public bool bool_AboutToRotate;
+
+
     void Start(){
         bool_IsRotate = false;
         gmobj_Snake =  GameObject.FindWithTag("Snake"); 
@@ -66,7 +68,7 @@ public class sc_CubeRotation : MonoBehaviour{
         }else if(str_rotateDirection == "counterClockwise"){
             v3_rotateDirection.Set(-90.0f,0.0f,0.0f);
         }
-
+        
         if(!bool_IsRotate){
             StartCoroutine("StartCubeRoation" , v3_rotateDirection);
         }

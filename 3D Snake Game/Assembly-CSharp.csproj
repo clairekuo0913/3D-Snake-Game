@@ -72,6 +72,8 @@
      <Compile Include="Assets\Scripts\Snake\sc_SnakeBodyPart.cs" />
      <Compile Include="Assets\Scripts\Text\sc_FadeTextUp1.cs" />
      <Compile Include="Assets\Scripts\TryTrySee\GameManager\GameManager.cs" />
+     <Compile Include="Assets\Scripts\TryTrySee\GameManager\Handler\RotationHandler.cs" />
+     <Compile Include="Assets\Scripts\TryTrySee\GameManager\Handler\SnakeCollisionHandler.cs" />
      <Compile Include="Assets\Scripts\TryTrySee\GameManager\InputManager\InputManager.cs" />
      <Compile Include="Assets\Scripts\TryTrySee\GameManager\LevelManager\LevelInfo.cs" />
      <Compile Include="Assets\Scripts\TryTrySee\GameManager\LevelManager\LevelManager.cs" />
@@ -81,7 +83,10 @@
      <Compile Include="Assets\Scripts\TryTrySee\GameManager\WorldObject Manager\WorldObject_Cube.cs" />
      <Compile Include="Assets\Scripts\TryTrySee\GameManager\WorldObject Manager\WorldObject_Endpoint.cs" />
      <Compile Include="Assets\Scripts\TryTrySee\GameManager\WorldObject Manager\WorldObject_Obstacle.cs" />
+     <Compile Include="Assets\Scripts\TryTrySee\GameManager\WorldObject Manager\WorldObject_Obstacles.cs" />
      <Compile Include="Assets\Scripts\TryTrySee\GameManager\WorldObject Manager\WorldObject_Snake.cs" />
+     <Compile Include="Assets\Scripts\TryTrySee\GameManager\WorldObject Manager\WorldObject_SnakeBodyPart.cs" />
+     <Compile Include="Assets\Scripts\TryTrySee\GameManager\WorldObject Manager\WorldObject_SnakeHead.cs" />
      <Compile Include="Assets\Scripts\TryTrySee\GameManager\WorldObject Manager\WorldObjectManager.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />

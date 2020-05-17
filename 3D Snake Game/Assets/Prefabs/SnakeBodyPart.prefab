@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 489560118834465902}
   - component: {fileID: 1339052251038595078}
   - component: {fileID: 2477738892629736123}
+  - component: {fileID: 5141260807821227190}
   - component: {fileID: 3544899258667791993}
   m_Layer: 0
   m_Name: SnakeBodyPart
@@ -92,7 +93,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3544899258667791993
+--- !u!114 &5141260807821227190
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,6 +101,18 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4549538244087577895}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 659710a7ea0c243b4a0fd26df7b54560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3544899258667791993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4549538244087577895}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4eba3d4a33a34fadbf2fa8da8d5ecb8, type: 3}
   m_Name: 

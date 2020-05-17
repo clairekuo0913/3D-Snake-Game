@@ -514,7 +514,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   f_NumOfBodyParts: 7
-  f_SnakeSpeed: 0.1
+  f_SnakeSpeed: 0.3
   gmobj_SnakeBodyPart: {fileID: 4549538244087577895, guid: 6531ab67994a14352bcde186b1ac72fc,
     type: 3}
   bool_SnakeStop: 0

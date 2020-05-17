@@ -8,7 +8,7 @@ public class WorldObject_Cube : MonoBehaviour
     	GameObject oCube = GameObject.FindWithTag("Cube");
     	if(oCube!=null){
     		// cube init scale
-    		oCube.transform.localScale = LevelInfo.v3_CubeScale;
+    		// oCube.transform.localScale = LevelInfo.v3_CubeScale;
     		// cube init animation
     			/* TODO */
     		//Debug.Log("Cube Initialize Animation\n");

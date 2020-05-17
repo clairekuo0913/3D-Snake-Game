@@ -11,8 +11,8 @@ public static class LevelInfo {
 	private static string levelText;
 	public static void Level_test(){
 		// Snake Parameter
-		f_snakeSpeed = 0.3f;
-		f_snakeLength = 7f;
+		f_snakeSpeed = 0.1f;
+		f_snakeLength = 5f;
 
 		// InCube World objects Position
 		v3_cubePos.Set(0,0,0);

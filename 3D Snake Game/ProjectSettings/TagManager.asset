@@ -13,6 +13,10 @@ TagManager:
   - SnakeHead
   - Endpoint
   - Obstacles
+  - InputSurface
+  - RotationHandler
+  - inCubeWorldObject
+  - EndPoint
   layers:
   - Default
   - TransparentFX

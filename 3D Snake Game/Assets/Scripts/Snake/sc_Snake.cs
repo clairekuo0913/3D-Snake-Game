@@ -87,7 +87,6 @@ public class sc_Snake : MonoBehaviour
 
 
 
-
     // Start is called before the first frame update
     void Start()
     {

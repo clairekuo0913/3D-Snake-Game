@@ -1,64 +1,130 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
-
-
+    GameObject oSnake;
 	static string sLevelState; // start -> wait -> play -> dead or win
+    string sReason;
     // Start is called before the first frame update
     void Start()
     {
         UpdateLevelState("start");
     }
 
-    void LevelInitialize(){
-        if(PlayerStats.CurrentLevel==0){
-            LevelInfo.Level_test();
-        }
+    void LevelStart(){
+        Debug.Log("Level State: Start!\n");
+        // if(PlayerStats.CurrentLevel==0){
+            // LevelInfo.Level_test();
+        // }
         // Snake
-        WorldObject_Snake.Initialize();
-        // wait for Snake Complete
-            /* TODO? */
+        oSnake = GameObject.FindWithTag("Snake");
+        if(oSnake!=null){
+            oSnake.GetComponent<WorldObject_Snake>().Initialize();
+        }
         // Object Initialize
         WorldObjectManager.Initialize();
         // UI Initialize
       		/* TODO */
       	// Input Forbidden  
         InputManager.Forbidden();
-
+        RotationHandler.Forbidden();
         // Switch To Next State
         UpdateLevelState("wait");
 
     }
 
-    void LevelWait(){
+    IEnumerator LevelWait(){
+        Debug.Log("Level State: Wait!\n");
     	InputManager.Allowed();
-    	if(false){// if GetRotate Response:
-    		UpdateLevelState("play");
+        RotationHandler.Allowed();
+    	while(sLevelState == "wait"){
+            if(RotationHandler.IsRotating()){
+                UpdateLevelState("play");
+                yield break;
+            }   
+            yield return null;
     	}
+        
     }
 
-	void LevelPlay(){
-		while(/*WIN?*/false){
-			
+	IEnumerator LevelPlay(){
+        InputManager.Allowed();
+        WorldObjectManager.UpdateState("play");
+        RotationHandler.Allowed();
+        SnakeCollisionHandler.Allowed();
+        Debug.Log("Level State: Play!\n");
+		while(sLevelState == "play"){
+            GameObject oCollision = SnakeCollisionHandler.CollisionObject();
+            if(oCollision!=null){
+                if(oCollision.tag == "Cube"){
+                    sReason = "die_cube";
+                    UpdateLevelState("die");
+                    yield break;
+                }else if(oCollision.tag == "SnakeBodyPart"){
+                    sReason = "die_snake";
+                    UpdateLevelState("die");
+                    yield break;
+                }else if(oCollision.tag == "Endpoint"){
+                    UpdateLevelState("win");
+                    yield break;
+                }
+                // }else if(oCollision.tag == "Obstacle"){
+                //     oSnake.GetComponent<WorldObject_Snake>().UpdateState("decrease");
+                //     oCollision.GetComponent<WorldObject_Obstacle>().UpdateState("into");
+
+                //     GameObject currCollision = SnakeCollisionHandler.CollisionObject();
+
+                //     while(oCollision == currCollision /*|| oCollision.GetComponent<WorldObject_Obstacle>().CurrentState()!="wait"*/){
+                //         currCollision = SnakeCollisionHandler.CollisionObject();
+                //         yield return null;
+                //     }
+                //     // Debug.Log("Leave the Obstacle!\n");
+                // }
+            }
+            yield return null;            
 		}
 	}
 
+    void LevelDie(){
+        Debug.Log("Level State: "+sReason+"!\n");
+        if(sReason == "die_snake"){
+            // Animator、Sound 
+            Debug.Log("die snake\n");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            // UpdateLevelState("start");
+        }else if(sReason == "die_cube"){
+            // Animator、Sound
+            Debug.Log("die cube\n");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                /* TODO */
+        }
+    }
+
+    void LevelWin(){
+        if(PlayerStats.CurrentLevel == 0){
+            PlayerStats.CurrentLevel=1;
+            SceneManager.LoadScene("Level t2");
+        }else if(PlayerStats.CurrentLevel == 1){
+            PlayerStats.CurrentLevel=0;
+            SceneManager.LoadScene("Level t1");
+        }
+        //Scene Change, Animator, Sound bla 
+    }
+
     void UpdateLevelState(string levelState){
-    	if(levelState == "start"){
-    		sLevelState = "start";
-            LevelInitialize();
+    	sLevelState = levelState;
+        if(levelState == "start"){
+            LevelStart();
     	}else if(levelState == "wait"){
-    		sLevelState = "wait";
-    		LevelWait();
+    		StartCoroutine("LevelWait");
         }else if(levelState == "play"){
-        	/* TODO */
+            StartCoroutine("LevelPlay");
         }else if(levelState == "die"){
-        	/* TODO */
+        	LevelDie();
         }else if(levelState == "win"){
-        	/* TODO */
+            LevelWin();
         }
     }
 
