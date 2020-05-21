@@ -17,6 +17,7 @@ TagManager:
   - RotationHandler
   - inCubeWorldObject
   - EndPoint
+  - SnakeHeadCollider
   layers:
   - Default
   - TransparentFX

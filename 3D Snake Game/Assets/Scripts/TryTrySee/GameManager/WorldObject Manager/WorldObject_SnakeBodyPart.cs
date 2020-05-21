@@ -8,6 +8,14 @@ public class WorldObject_SnakeBodyPart : MonoBehaviour
 	GameObject gmobj_SnakeHead;
     // GameObject gmobj_Cube;
 
+    void OnTriggerEnter(Collider other){
+       
+        if(other.tag == "SnakeHeadCollider"){
+             Debug.Log(other);
+            RotationHandler.SnakeCollisionPara = true;
+        }
+    }
+
     bool IsTouchingBody(){
 
     	if(gmobj_SnakeHead==null)return false;
@@ -32,8 +40,8 @@ public class WorldObject_SnakeBodyPart : MonoBehaviour
        
 
         Bounds bnd_snakeHeadBounds = gmobj_SnakeHead.GetComponent<Collider>().bounds;
-        for(int i=0;i<5;i++){
-            Debug.DrawLine(v3_snakeHeadPos[i],Vector3.zero);
+        for(int i=0;i<4;i++){
+            // Debug.DrawLine(v3_snakeHeadPos[i],v3_snakeHeadPos[i+1]);
             if(this.GetComponent<Collider>().bounds.Contains(v3_snakeHeadPos[i])){
                 return true;
             }
@@ -47,6 +55,7 @@ public class WorldObject_SnakeBodyPart : MonoBehaviour
         gmobj_SnakeHead = GameObject.FindWithTag("SnakeHead");
         // gmobj_Cube = GameObject.FindWithTag("Cube");
     }
+
 
     // Update is called once per frame
     void Update()

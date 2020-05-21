@@ -21,10 +21,10 @@ MonoBehaviour:
     y: 30
     width: 1440
     height: 850
-  m_MinSize: {x: 683, y: 498}
-  m_MaxSize: {x: 18008, y: 14048}
+  m_MinSize: {x: 681, y: 498}
+  m_MaxSize: {x: 18002, y: 14048}
   vertical: 0
-  controlID: 2271
+  controlID: 4282
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -127,9 +127,9 @@ MonoBehaviour:
     width: 1069
     height: 850
   m_MinSize: {x: 406, y: 498}
-  m_MaxSize: {x: 14006, y: 14048}
+  m_MaxSize: {x: 14002, y: 14048}
   vertical: 1
-  controlID: 2272
+  controlID: 4283
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 2273
+  controlID: 4284
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -210,23 +210,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 7662fbff
-      m_LastClickedID: -302474
-      m_ExpandedIDs: 9a62fbff00cffcff8c8afdffc8a7ffff2cfbffff2efbffffccfbffffa22c0000d62c0000fc2c0000362d00003a2d00003e2d00000c4200003e7a00005ea3000064a3000058c80000ecc80000f0c80000f4c80000
+      m_SelectedIDs: 0af4ffff
+      m_LastClickedID: -3062
+      m_ExpandedIDs: 00b4ffff58b6ffffbebcffffe6d0ffffa6fbffffb0fbffffdcfbffffdefbfffff80e00005a0f00005e0f000076310000143200002232000048320000ca3b0000683c0000763c00009c3c0000403f0000de3f0000ec3f0000124000005e400000fc4000000a41000030410000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Obstacle1
-        m_OriginalName: Obstacle1
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -1270
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 5}
       m_SearchString: 
@@ -295,9 +295,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -3.5501509, y: 1.9797807, z: -5.25074}
+    m_Target: {x: -1.0000117, y: -0.50001025, z: 1}
     speed: 2
-    m_Value: {x: -3.5501509, y: 1.9797807, z: -5.25074}
+    m_Value: {x: -1.0000117, y: -0.50001025, z: 1}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -325,19 +325,19 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.1558064, y: -0.52120095, z: 0.097438656, w: 0.83341444}
+    m_Target: {x: -0.05193912, y: 0.94547015, z: -0.2604631, w: -0.18854077}
     speed: 2
-    m_Value: {x: 0.1558064, y: -0.52120095, z: 0.097438656, w: 0.83341444}
+    m_Value: {x: -0.05193912, y: 0.94547015, z: -0.2604631, w: -0.18854077}
   m_Size:
-    m_Target: 29.574453
+    m_Target: 2.333453
     speed: 2
-    m_Value: 29.574453
+    m_Value: 2.333453
   m_Ortho:
     m_Target: 0
     speed: 2
     m_Value: 0
   m_ShowGlobalGrid: 1
-  m_LastSceneViewRotation: {x: -0.09104424, y: 0.34420153, z: 0.033557013, w: 0.93386847}
+  m_LastSceneViewRotation: {x: 0, y: 0, z: 0, w: 0}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -390,10 +390,10 @@ MonoBehaviour:
     y: 536
     width: 1069
     height: 314
-  m_MinSize: {x: 336, y: 274}
-  m_MaxSize: {x: 14006, y: 10024}
+  m_MinSize: {x: 332, y: 274}
+  m_MaxSize: {x: 14002, y: 10024}
   vertical: 0
-  controlID: 2193
+  controlID: 4232
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -458,20 +458,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/TryTrySee/GameManager/WorldObject Manager
+    - Assets/Scripts/TryTrySee/GameManager/Handler
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scripts/TryTrySee/GameManager/WorldObject Manager
+  - Assets/Scripts/TryTrySee/GameManager/Handler
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: /Users/pot/Documents/_Pot_/MyGit/3D-Snake-Game/3D Snake Game
+  m_LastProjectPath: /Users/pot/Desktop/3D Snake Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 219}
-    m_SelectedIDs: 0c270000
-    m_LastClickedID: 9996
-    m_ExpandedIDs: 00000000002700003027000056270000a8270000d427000056280000f2280000122900001e2900007a290000be290000c6290000602a00008a2c000000ca9a3b
+    scrollPos: {x: 0, y: 155}
+    m_SelectedIDs: 880a0000
+    m_LastClickedID: 2696
+    m_ExpandedIDs: 00000000540a0000860a0000ac0a0000000b00002e0b0000b00b00004c0c00006c0c0000780c0000d40c0000180d0000200d0000ba0d00009e2c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -499,7 +499,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000002700003027000056270000a8270000d427000056280000f2280000122900001e2900007a290000be290000c6290000602a00008a2c000000ca9a3b
+    m_ExpandedIDs: 00000000540a0000860a0000ac0a0000000b00002e0b0000b00b00004c0c00006c0c0000780c0000d40c0000180d0000200d0000ba0d00009e2c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -524,24 +524,24 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 7662fbff
-    m_LastClickedInstanceID: -302474
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: 0af4ffff
+    m_LastClickedInstanceID: -3062
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 00000000ea280000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: WorldObject_SnakeBodyPart
-      m_OriginalName: WorldObject_SnakeBodyPart
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 14692
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 11}
     m_CreateAssetUtility:
